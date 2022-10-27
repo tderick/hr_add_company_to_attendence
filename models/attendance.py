@@ -8,8 +8,7 @@ class InheritedAttendance(models.Model):
 
     @api.model
     def create(self, values):
-        for attendance in self:
-            attendance.agence = self.env.company_id.name
+        self.agence = self.env.company_id.name
         override_create = super(InheritedAttendance, self).create(values)
         return override_create
 
