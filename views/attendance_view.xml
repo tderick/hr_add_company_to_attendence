@@ -4,7 +4,7 @@
         <field name="model">hr.attendance</field>
         <field name="inherit_id" ref="hr_attendance.view_attendance_tree" />
         <field name="arch" type="xml">
-            <field name="worked_hours" position="after">
+            <field name="check_out" position="after">
                 <field name="agence" />
             </field>
         </field>
