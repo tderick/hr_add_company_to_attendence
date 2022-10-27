@@ -15,6 +15,6 @@ class InheritedAttendance(models.Model):
 
     @api.multi
     def write(self, values):
-        attendance.agence = self.env.user.company_id.street
+        self.agence = self.env.user.company_id.street
         override_write = super(InheritedAttendance, self).write(values)
         return override_write
